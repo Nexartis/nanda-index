@@ -24,7 +24,7 @@ This project is licensed under the **MIT License** — Copyright (c) 2025 Projec
 
 ## Purpose
 
-KYM uses the NANDA Index as the agent discovery registry. The production deployment of NANDA services has been reimplemented in TypeScript as Cloudflare Workers (v2 architecture). This Python repo is maintained as the upstream fork and reference implementation.
+KYM uses the NANDA Index as the agent discovery registry. The production deployment of NANDA services has been reimplemented in TypeScript as Cloudflare Workers (v2 architecture). This fork tracks the upstream Python project (`projnanda/nanda-index`) as a reference implementation.
 
 This fork allows Nexartis to:
 - Track upstream NANDA protocol and schema changes
