@@ -24,10 +24,12 @@ This project is licensed under the **MIT License** — Copyright (c) 2025 Projec
 
 ## Purpose
 
-KYM uses the NANDA Index as the agent discovery registry. This fork allows Nexartis to:
-- Run a private NANDA Index instance for development and production
-- Test integration changes before contributing upstream
-- Add Nexartis-specific deployment configurations (e.g. `Dockerfile.kym`)
+KYM uses the NANDA Index as the agent discovery registry. The production deployment of NANDA services has been reimplemented in TypeScript as Cloudflare Workers (v2 architecture). This Python repo is maintained as the upstream fork and reference implementation.
+
+This fork allows Nexartis to:
+- Track upstream NANDA protocol and schema changes
+- Reference the Python implementation during TypeScript reimplementation
+- Test upstream changes before integrating into the Cloudflare Worker stack
 
 ## Branch Strategy
 
@@ -38,7 +40,8 @@ KYM uses the NANDA Index as the agent discovery registry. This fork allows Nexar
 ## Syncing with Upstream
 
 ```bash
-# One-time setup (already done):
+# One-time setup (skip if upstream remote already exists):
+# Check with: git remote -v
 git remote add upstream https://github.com/projnanda/nanda-index.git
 
 # Sync upstream changes into dev:
